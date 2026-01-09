@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import PropTypes from 'prop-types';
 
 function Employee({firstName,lastName,role}) {
 
@@ -10,5 +10,11 @@ function Employee({firstName,lastName,role}) {
     </tr>
   );
 }
+
+Employee.propTypes = {
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
+  role: PropTypes.string.isRequired,
+};
 
 export default Employee;
